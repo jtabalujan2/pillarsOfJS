@@ -30,11 +30,9 @@ Why is this important though? Well, it's the reason why things can be so reusabl
 
  For example, the bind() function comes from a prototype of the object Function. No matter how many times you run the bind function with the same parameters, it will always output the same result (and in a brand new function which helps with immutability).
 
+Along with reusability, it has no side effects because they do not mutate any shared state or mutable arguemnts. They do not share state or side-effects and because of it, are unlikely to cause conflict with each other or with other, unrelated portions of the application.
 
-
-
-
-
+    At the end of the day, "pure functions produce stronger guarantees of encapsulation than objects without function purity... The ability to change implementation without impacting the rest of the program, a self-documenting public interface (the function signature), independence from outside code, the ability to move code around freely between files, modules, projects, and so on."
 
 ### **Closures**
 
@@ -55,6 +53,8 @@ var counter = function counter() {
   };
 };
 ```
-You can use closure to create data privacy and it's really simple to create: You can a) Define a function within another function then expose the inner function (by returning it or passing it into another function)
+You can use closure to create data privacy and it's really simple to create: 
+
+ *Define a function within another function then expose the inner function (by returning it or passing it into another function)*
 
 The end result of closure is access to the variables from the inner function even if has finished running. By default, variables are removed from JS when they are inside a function and the function has finished executing. 
