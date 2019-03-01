@@ -24,15 +24,20 @@ Part of what makes JS so powerful are two important fundamental topics:
 
 So what's the big deal with functional programming anyway? If there were to be one thing to be highlighted, its **pure functions**. Pure functions, by definition, have something called *idempotence*. This simply means:
 
-    Given the same inputs, a pure function will always return the same output, regardless of the number of times the function is called
+```
+Given the same inputs, a pure function will always return the same output, regardless of the number of times the function is called
+```
 
 Why is this important though? Well, it's the reason why things can be so reusable and extremely useful for a different variety of applications. It also means that you're able to write your code declaritively, not imperatively. (You can use functions as a black box and you don't need to fully understand the complexity around it. Focus on the inputs and the results, rather than the logic for it to happen).
 
- For example, the bind() function comes from a prototype of the object Function. No matter how many times you run the bind function with the same parameters, it will always output the same result (and in a brand new function which helps with immutability).
+``` 
+For example, the bind() function comes from a prototype of the object Function. No matter how many times you run the bind function with the same parameters, it will always output the same result (and in a brand new function which helps with immutability).
+```
 
 Along with reusability, it has no side effects because they do not mutate any shared state or mutable arguemnts. They do not share state or side-effects and because of it, are unlikely to cause conflict with each other or with other, unrelated portions of the application.
-
-    At the end of the day, "pure functions produce stronger guarantees of encapsulation than objects without function purity... The ability to change implementation without impacting the rest of the program, a self-documenting public interface (the function signature), independence from outside code, the ability to move code around freely between files, modules, projects, and so on."
+ ```
+At the end of the day, "pure functions produce stronger guarantees of encapsulation than objects without function purity... The ability to change implementation without impacting the rest of the program, a self-documenting public interface (the function signature), independence from outside code, the ability to move code around freely between files, modules, projects, and so on."
+```
 
 ### **Closures**
 
